@@ -6,5 +6,4 @@ python-dotenv
 plaid-python
 requests
 Flask-Bootstrap
-chart.js
 gunicorn
