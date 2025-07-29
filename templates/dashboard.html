@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Dashboard</h2>
+  <p>Welcome to your personal finance url_for('index')!</p>
+  <!-- Placeholder: Account balances, transaction list, and spending chart will be shown here. -->
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Accounts</h4>
+      <!-- Accounts table will go here -->
+    </div>
+    <div class="col-md-6">
+      <h4>Spending by Category</h4>
+      <canvas id="spendingChart" width="400" height="300"></canvas>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4>Recent Transactions</h4>
+      <!-- Transactions table will go here -->
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+<script>
+// Placeholder for Chart.js spending chart
+const ctx = document.getElementById('spendingChart').getContext('2d');
+const spendingChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Category 1', 'Category 2', 'Category 3'],
+        datasets: [{
+            data: [100, 200, 150],
+            backgroundColor: ['#0d6efd', '#198754', '#ffc107']
+        }]
+    }
+});
+</script>
+{% endblock %}
